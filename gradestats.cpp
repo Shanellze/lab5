@@ -8,11 +8,17 @@ int main(){
     double average;
     std::vector<int> nums;
 
-    do{
-    std::cout << "Enter grade (or -1 to end): ";
-    std::cin >> x;
-    nums.push_back(x);
-    } while (x != -1 || nums.size() != 100);
+    while (x != -1 || nums.size() != 100) {
+        std::cout << "Enter grade (or -1 to end): ";
+        std::cin >> x;
+
+        if (x == -1) {
+            break;
+        } else {
+            nums.push_back(x);
+        }
+
+    }
 
     for (int n : nums){
         total += x;
