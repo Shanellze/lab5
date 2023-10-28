@@ -1,20 +1,24 @@
 #include <iostream>
+#include <vector>
 
 int main(){
 
     int x;
-    int count=0;
-    int total;
+    int total = 0;
     double average;
+    std::vector<int> nums;
 
     do{
     std::cout << "Enter grade (or -1 to end): ";
     std::cin >> x;
-    count++;
-    total += x;
-    } while ((x != -1)||(count != 100));
+    nums.push_back(x);
+    } while (x != -1 || nums.size() != 100);
 
-    average = total/count;
+    for (int n : nums){
+        total += x;
+    } 
+
+    average = total/nums.size();
     std::cout << "Average: " << average;  
     
 }
