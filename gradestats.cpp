@@ -21,7 +21,7 @@ int main(){
     }
 
     for (int n : nums){
-        total += x;
+        total += n;
     } 
 
     average = total/nums.size();
